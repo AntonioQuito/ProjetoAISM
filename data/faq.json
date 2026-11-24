@@ -1,0 +1,112 @@
+[
+ {
+  "id": "FAQ-01",
+  "title": "Configurar webhooks de integração (painel V2)",
+  "keywords": [
+   "webhook",
+   "integração",
+   "painel v2"
+  ],
+  "content": "1) No painel V2, abra Definições > Integrações > Webhooks. 2) Clique em 'Novo webhook'. 3) Introduza o URL HTTPS que vai receber os eventos. 4) Escolha os eventos a subscrever. 5) Copie o 'segredo de assinatura' para validar o cabeçalho X-Signature. 6) Clique em 'Enviar evento de teste' e confirme que o seu servidor devolve HTTP 200."
+ },
+ {
+  "id": "FAQ-02",
+  "title": "Recuperar palavra-passe",
+  "keywords": [
+   "password",
+   "palavra-passe",
+   "recuperação",
+   "login"
+  ],
+  "content": "1) Na página de login, clique em 'Esqueci-me da palavra-passe'. 2) Introduza o email da conta. 3) O email de recuperação chega em poucos minutos; verifique a pasta de spam. 4) A ligação expira ao fim de 30 minutos; se expirar, peça outra. 5) Se o email não chegar, consulte FAQ-08."
+ },
+ {
+  "id": "FAQ-03",
+  "title": "Erros 401/403 e rotação de chaves de API",
+  "keywords": [
+   "api",
+   "401",
+   "403",
+   "chave",
+   "api key"
+  ],
+  "content": "1) Erro 401 significa chave inválida ou em falta; 403 significa chave sem permissões. 2) Em Definições > Desenvolvedores > Chaves de API, verifique se a chave está ativa. 3) Para rodar a chave, clique em 'Gerar nova chave', atualize a sua aplicação e só depois revogue a antiga. 4) Envie a chave no cabeçalho Authorization: Bearer <chave>."
+ },
+ {
+  "id": "FAQ-04",
+  "title": "Exportar dados para CSV",
+  "keywords": [
+   "exportar",
+   "csv",
+   "dados"
+  ],
+  "content": "1) Abra Definições > Dados > Exportar. 2) Escolha o conjunto de dados e o intervalo de datas. 3) Clique em 'Exportar CSV'. 4) Receberá um email com a ligação de descarga, válida durante 24 horas. Exportações grandes (mais de 100 000 linhas) podem demorar até 15 minutos."
+ },
+ {
+  "id": "FAQ-05",
+  "title": "A aplicação fecha sozinha ou crasha",
+  "keywords": [
+   "crash",
+   "fecha",
+   "crasha",
+   "erro",
+   "aplicação",
+   "app"
+  ],
+  "content": "1) Atualize a aplicação para a versão mais recente. 2) Limpe a cache (Definições da app > Armazenamento > Limpar cache). 3) Reinicie o dispositivo. 4) Se o problema continuar, desinstale e reinstale a aplicação (os dados ficam guardados na conta). 5) Se persistir, envie-nos o modelo do dispositivo e a versão da app."
+ },
+ {
+  "id": "FAQ-06",
+  "title": "Convidar membros para a equipa",
+  "keywords": [
+   "convidar",
+   "equipa",
+   "colegas",
+   "utilizadores"
+  ],
+  "content": "1) Abra Definições > Equipa. 2) Clique em 'Convidar membro'. 3) Introduza o email do colega e escolha a função (Administrador, Editor ou Leitor). 4) O convite expira em 7 dias. O número de lugares depende do plano contratado."
+ },
+ {
+  "id": "FAQ-07",
+  "title": "Descarregar faturas",
+  "keywords": [
+   "fatura",
+   "descarregar",
+   "pdf",
+   "nif"
+  ],
+  "content": "1) Abra Definições > Faturação > Histórico. 2) Clique no ícone PDF junto à fatura pretendida. 3) Para alterar o NIF ou a morada de faturação, edite os dados em Faturação > Dados fiscais antes da próxima emissão; faturas já emitidas não são alteradas."
+ },
+ {
+  "id": "FAQ-08",
+  "title": "Notificações por email não chegam",
+  "keywords": [
+   "email",
+   "notificações",
+   "spam"
+  ],
+  "content": "1) Verifique a pasta de spam e junk. 2) Adicione noreply@exemplo-suporte.pt à lista de remetentes seguros. 3) Em Definições > Notificações confirme que as notificações estão ativas. 4) Confirme que o email da conta está correto e verificado."
+ },
+ {
+  "id": "FAQ-09",
+  "title": "Ativar autenticação em dois passos (2FA)",
+  "keywords": [
+   "2fa",
+   "dois passos",
+   "autenticação",
+   "segurança"
+  ],
+  "content": "1) Abra Definições > Segurança. 2) Clique em 'Ativar autenticação em dois passos'. 3) Digitalize o código QR com uma aplicação autenticadora (por exemplo Google Authenticator). 4) Introduza o código de 6 dígitos para confirmar. 5) Guarde os códigos de recuperação num local seguro."
+ },
+ {
+  "id": "FAQ-10",
+  "title": "Limites de pedidos da API (erro 429)",
+  "keywords": [
+   "429",
+   "limite",
+   "rate limit",
+   "api"
+  ],
+  "content": "1) O erro 429 significa que excedeu o limite de pedidos: 60 por minuto no plano Pro e 300 por minuto no plano Business. 2) Leia o cabeçalho Retry-After e aguarde esse tempo antes de repetir. 3) Implemente 'exponential backoff' nos pedidos. 4) Agrupe pedidos sempre que possível usando os endpoints em lote."
+ }
+]

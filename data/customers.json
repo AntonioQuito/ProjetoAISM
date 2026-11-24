@@ -1,0 +1,358 @@
+[
+ {
+  "customer_id": "C001",
+  "name": "Ana Ferreira",
+  "email": "ana.ferreira@exemplo.pt",
+  "plan": "Pro",
+  "status": "active",
+  "invoices": [
+   {
+    "invoice_id": "INV-2026-0912",
+    "date": "2026-10-03",
+    "amount_eur": 49.0,
+    "status": "paid",
+    "description": "Plano Pro - mensal"
+   },
+   {
+    "invoice_id": "INV-2026-1103",
+    "date": "2026-11-03",
+    "amount_eur": 49.0,
+    "status": "paid",
+    "description": "Plano Pro - mensal"
+   }
+  ],
+  "payments": [
+   {
+    "payment_id": "PAY-8841",
+    "date": "2026-10-03",
+    "amount_eur": 49.0,
+    "method": "card_visa_1234",
+    "invoice_id": "INV-2026-0912",
+    "status": "succeeded"
+   },
+   {
+    "payment_id": "PAY-9102",
+    "date": "2026-11-03",
+    "amount_eur": 49.0,
+    "method": "card_visa_1234",
+    "invoice_id": "INV-2026-1103",
+    "status": "succeeded"
+   },
+   {
+    "payment_id": "PAY-9103",
+    "date": "2026-11-03",
+    "amount_eur": 49.0,
+    "method": "card_visa_1234",
+    "invoice_id": "INV-2026-1103",
+    "status": "succeeded"
+   }
+  ],
+  "account_notes": []
+ },
+ {
+  "customer_id": "C002",
+  "name": "Bruno Costa",
+  "email": "bruno.costa@exemplo.pt",
+  "plan": "Business (anual)",
+  "status": "active",
+  "invoices": [
+   {
+    "invoice_id": "INV-2025-1015",
+    "date": "2025-10-15",
+    "amount_eur": 540.0,
+    "status": "paid",
+    "description": "Plano Business - anual"
+   },
+   {
+    "invoice_id": "INV-2026-1015",
+    "date": "2026-10-15",
+    "amount_eur": 588.0,
+    "status": "pending",
+    "description": "Plano Business - anual",
+    "due_date": "2026-11-30"
+   }
+  ],
+  "payments": [
+   {
+    "payment_id": "PAY-7310",
+    "date": "2025-10-15",
+    "amount_eur": 540.0,
+    "method": "bank_transfer",
+    "invoice_id": "INV-2025-1015",
+    "status": "succeeded"
+   }
+  ],
+  "account_notes": []
+ },
+ {
+  "customer_id": "C003",
+  "name": "Carla Mendes",
+  "email": "carla.mendes@exemplo.pt",
+  "plan": "Starter",
+  "status": "active",
+  "invoices": [
+   {
+    "invoice_id": "INV-2026-1005",
+    "date": "2026-10-05",
+    "amount_eur": 19.0,
+    "status": "paid",
+    "description": "Plano Starter - mensal"
+   },
+   {
+    "invoice_id": "INV-2026-1105",
+    "date": "2026-11-05",
+    "amount_eur": 19.0,
+    "status": "failed",
+    "description": "Plano Starter - mensal"
+   }
+  ],
+  "payments": [
+   {
+    "payment_id": "PAY-8900",
+    "date": "2026-10-05",
+    "amount_eur": 19.0,
+    "method": "card_mastercard_5521",
+    "invoice_id": "INV-2026-1005",
+    "status": "succeeded"
+   },
+   {
+    "payment_id": "PAY-9120",
+    "date": "2026-11-05",
+    "amount_eur": 19.0,
+    "method": "card_mastercard_5521",
+    "invoice_id": "INV-2026-1105",
+    "status": "failed_card_declined"
+   }
+  ],
+  "account_notes": []
+ },
+ {
+  "customer_id": "C004",
+  "name": "Diogo Pinto",
+  "email": "diogo.pinto@exemplo.pt",
+  "plan": "Pro",
+  "status": "active",
+  "invoices": [
+   {
+    "invoice_id": "INV-2026-1012",
+    "date": "2026-10-12",
+    "amount_eur": 49.0,
+    "status": "paid",
+    "description": "Plano Pro - mensal"
+   },
+   {
+    "invoice_id": "INV-2026-1112",
+    "date": "2026-11-12",
+    "amount_eur": 49.0,
+    "status": "paid",
+    "description": "Plano Pro - mensal"
+   }
+  ],
+  "payments": [
+   {
+    "payment_id": "PAY-8870",
+    "date": "2026-10-12",
+    "amount_eur": 49.0,
+    "method": "card_visa_9087",
+    "invoice_id": "INV-2026-1012",
+    "status": "succeeded"
+   },
+   {
+    "payment_id": "PAY-9150",
+    "date": "2026-11-12",
+    "amount_eur": 49.0,
+    "method": "card_visa_9087",
+    "invoice_id": "INV-2026-1112",
+    "status": "succeeded"
+   }
+  ],
+  "account_notes": []
+ },
+ {
+  "customer_id": "C005",
+  "name": "Eduarda Lopes",
+  "email": "eduarda.lopes@exemplo.pt",
+  "plan": "Business (mensal)",
+  "status": "active",
+  "invoices": [
+   {
+    "invoice_id": "INV-2026-0908",
+    "date": "2026-09-08",
+    "amount_eur": 89.0,
+    "status": "paid",
+    "description": "Plano Business - mensal"
+   },
+   {
+    "invoice_id": "INV-2026-1008",
+    "date": "2026-10-08",
+    "amount_eur": 99.0,
+    "status": "paid",
+    "description": "Plano Business - mensal"
+   },
+   {
+    "invoice_id": "INV-2026-1108",
+    "date": "2026-11-08",
+    "amount_eur": 99.0,
+    "status": "paid",
+    "description": "Plano Business - mensal"
+   }
+  ],
+  "payments": [
+   {
+    "payment_id": "PAY-8500",
+    "date": "2026-09-08",
+    "amount_eur": 89.0,
+    "method": "card_visa_7765",
+    "invoice_id": "INV-2026-0908",
+    "status": "succeeded"
+   },
+   {
+    "payment_id": "PAY-8860",
+    "date": "2026-10-08",
+    "amount_eur": 99.0,
+    "method": "card_visa_7765",
+    "invoice_id": "INV-2026-1008",
+    "status": "succeeded"
+   },
+   {
+    "payment_id": "PAY-9140",
+    "date": "2026-11-08",
+    "amount_eur": 99.0,
+    "method": "card_visa_7765",
+    "invoice_id": "INV-2026-1108",
+    "status": "succeeded"
+   }
+  ],
+  "account_notes": [
+   "2026-10-01: preço do plano Business mensal alterado de 89.00 EUR para 99.00 EUR (aviso enviado por email a 2026-09-01)."
+  ]
+ },
+ {
+  "customer_id": "C006",
+  "name": "Fábio Ribeiro",
+  "email": "fabio.ribeiro@exemplo.pt",
+  "plan": "Starter",
+  "status": "cancelled",
+  "invoices": [
+   {
+    "invoice_id": "INV-2026-0905",
+    "date": "2026-09-05",
+    "amount_eur": 19.0,
+    "status": "paid",
+    "description": "Plano Starter - mensal"
+   },
+   {
+    "invoice_id": "INV-2026-1030",
+    "date": "2026-10-30",
+    "amount_eur": 19.0,
+    "status": "paid",
+    "description": "Plano Starter - mensal"
+   }
+  ],
+  "payments": [
+   {
+    "payment_id": "PAY-8420",
+    "date": "2026-09-05",
+    "amount_eur": 19.0,
+    "method": "card_visa_3310",
+    "invoice_id": "INV-2026-0905",
+    "status": "succeeded"
+   },
+   {
+    "payment_id": "PAY-8950",
+    "date": "2026-10-30",
+    "amount_eur": 19.0,
+    "method": "card_visa_3310",
+    "invoice_id": "INV-2026-1030",
+    "status": "succeeded"
+   }
+  ],
+  "account_notes": [
+   "2026-09-30: subscrição cancelada pelo cliente."
+  ]
+ },
+ {
+  "customer_id": "C007",
+  "name": "Gabriela Nunes",
+  "email": "gabriela.nunes@exemplo.pt",
+  "plan": "Pro",
+  "status": "active",
+  "invoices": [
+   {
+    "invoice_id": "INV-2026-1002",
+    "date": "2026-10-02",
+    "amount_eur": 49.0,
+    "status": "paid",
+    "description": "Plano Pro - mensal"
+   },
+   {
+    "invoice_id": "INV-2026-1102",
+    "date": "2026-11-02",
+    "amount_eur": 49.0,
+    "status": "paid",
+    "description": "Plano Pro - mensal"
+   }
+  ],
+  "payments": [
+   {
+    "payment_id": "PAY-8830",
+    "date": "2026-10-02",
+    "amount_eur": 49.0,
+    "method": "card_visa_4402",
+    "invoice_id": "INV-2026-1002",
+    "status": "succeeded"
+   },
+   {
+    "payment_id": "PAY-9080",
+    "date": "2026-11-02",
+    "amount_eur": 49.0,
+    "method": "card_visa_4402",
+    "invoice_id": "INV-2026-1102",
+    "status": "succeeded"
+   }
+  ],
+  "account_notes": []
+ },
+ {
+  "customer_id": "C008",
+  "name": "Hugo Martins",
+  "email": "hugo.martins@exemplo.pt",
+  "plan": "Business (mensal)",
+  "status": "active",
+  "invoices": [
+   {
+    "invoice_id": "INV-2026-0920",
+    "date": "2026-09-20",
+    "amount_eur": 99.0,
+    "status": "paid",
+    "description": "Plano Business - mensal"
+   },
+   {
+    "invoice_id": "INV-2026-1020",
+    "date": "2026-10-20",
+    "amount_eur": 99.0,
+    "status": "paid",
+    "description": "Plano Business - mensal"
+   }
+  ],
+  "payments": [
+   {
+    "payment_id": "PAY-8600",
+    "date": "2026-09-20",
+    "amount_eur": 99.0,
+    "method": "card_mastercard_1188",
+    "invoice_id": "INV-2026-0920",
+    "status": "succeeded"
+   },
+   {
+    "payment_id": "PAY-8990",
+    "date": "2026-10-20",
+    "amount_eur": 99.0,
+    "method": "card_mastercard_1188",
+    "invoice_id": "INV-2026-1020",
+    "status": "succeeded"
+   }
+  ],
+  "account_notes": []
+ }
+]
