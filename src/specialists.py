@@ -27,7 +27,8 @@ def billing(llm, text, ctx):
     cust = ctx["customer"]
     record = json.dumps(cust, ensure_ascii=False, indent=1) if cust else "NO CUSTOMER RECORD FOUND FOR THIS SENDER"
     res = llm.complete("billing", BILLING_SYSTEM, f"Billing database record:\n{record}\n\n{_msg(text)}", 700)
-    return {"draft": parse_json(res.text)["draft"], "customer_found": cust is not None}
+    return {"draft": parse_json(res.text)["draft"], "customer_found": cust is not None,
+            "customer_status": cust.get("status") if cust else None}
 
 
 def technical(llm, text, ctx):

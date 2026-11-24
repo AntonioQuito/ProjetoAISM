@@ -28,6 +28,8 @@ def supervise(llm, text, routing, spec):
     if routing["category"] == "technical" and (not spec.get("covered", True)
                                                or spec["draft"].lstrip().lower().startswith("[not covered]")):
         return {"decision": "ESCALAR", "destination": "SUPORTE_NIVEL_2", "reason": "not_covered", "llm_checked": False}
+    if routing["category"] == "billing" and spec.get("customer_status") == "cancelled":
+        return {"decision": "ESCALAR", "destination": "HUMANO", "reason": "cancelled_account", "llm_checked": False}
     issues = code_checks(routing["category"], spec["draft"])
     user = (f'Original message:\n"""{text}"""\n\nClassification: {routing}\n\nDraft reply:\n"""{spec["draft"]}"""')
     res = llm.complete("supervisor", SYSTEM, user, 300)
