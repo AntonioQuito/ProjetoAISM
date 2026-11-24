@@ -2,7 +2,7 @@
 
 A multi-agent customer-support triage system. A **Router** agent classifies each free-text message (category: `billing`, `technical` or `complaint`; urgency 1 to 3). **Only one** specialist agent (billing, technical support or complaints) then writes a draft reply, and a **Supervisor** agent decides whether to `ENVIAR` (send to the customer) or `ESCALAR` (escalate to a human or to Level 2 support). The evaluation script keeps a full audit log of every decision.
 
-Course: Intelligent Agents and Multi-Agent Systems. Group XX.
+Course: Intelligent Agents and Multi-Agent Systems. Group 7.
 
 **Group members:** António Santos (240000401), Afonso Coelho (240000372), Duarte Barros (240000330)
 
