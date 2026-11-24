@@ -1,0 +1,52 @@
+id,text,ambiguous,exp_cat,pred_cat,exp_urg,pred_urg,exp_dec,pred_dec,reason,issues,draft,specialist_calls,llm_calls,in_tok,out_tok,latency_s,error,cat_ok,urg_ok,dec_ok
+M05,A app crasha quando tento pagar a fatura anual.,True,technical,technical,2,2,ENVIAR,ESCALAR,not_covered,,"[not covered] Pedimos desculpa, mas o problema referido não se encontra coberto pela nossa base de conhecimento atual. A nossa equipa irá analisar a situação o mais brevemente possível. Equipa de Suporte",1,2,2164,84,18.187,,True,True,False
+M10,Cancelei a subscrição em setembro e cobraram-me 19€ em outubro. Isto é inadmissível!!,True,billing,billing,2,2,ENVIAR,ESCALAR,cancelled_account,,"Estimado Fábio Ribeiro,
+
+Compreendemos a sua preocupação relativamente à cobrança. Analisámos o seu registo e verificamos que a subscrição do plano Starter foi cancelada a 30 de setembro de 2026. No entanto, consta o pagamento PAY-8950 no valor de 19,00 € efetuado a 30 de outubro de 2026, referente à fatura INV-2026-1030, pago através do cartão Visa terminado em 3310.
+
+Esta situação será encaminhada para a equipa de faturação para ser revista com atenção.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,2,1193,183,11.488,,True,True,False
+M16,Esqueci-me da password e o email de recuperação não chega.,False,technical,technical,1,2,ENVIAR,ENVIAR,ok,,"Bom dia.
+
+Para recuperar a sua palavra-passe, siga os passos abaixo:
+
+1. Na página de login, clique em 'Esqueci-me da palavra-passe'.
+2. Introduza o email da conta.
+3. O email de recuperação chega em poucos minutos; verifique a pasta de spam.
+4. A ligação expira ao fim de 30 minutos; se expirar, peça outra.
+5. Se o email continuar a não chegar, verifique também a pasta de spam e junk, adicione noreply@exemplo-suporte.pt à lista de remetentes seguros e confirme que o email da conta está correto.
+
+Ficamos ao dispor para qualquer dúvida adicional.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,2503,246,24.156,,True,False,True
+M17,Estou a receber erro 429 na API quando faço muitos pedidos. O que significa?,False,technical,technical,2,1,ENVIAR,ENVIAR,ok,,"Bom dia.
+
+Em resposta à sua questão sobre o erro 429 na API, informo o seguinte:
+
+1) O erro 429 significa que excedeu o limite de pedidos: 60 por minuto no plano Pro e 300 por minuto no plano Business.
+2) Leia o cabeçalho Retry-After e aguarde esse tempo antes de repetir.
+3) Implemente 'exponential backoff' nos pedidos.
+4) Agrupe pedidos sempre que possível usando os endpoints em lote.
+
+Se necessitar de mais alguma ajuda, disponha.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,2492,214,24.449,,True,False,True
+M24,As notificações por email deixaram de me chegar.,False,technical,technical,1,2,ENVIAR,ENVIAR,ok,,"Bom dia.
+
+Para resolver a situação com as notificações por email, por favor, siga os passos indicados:
+
+1) Verifique a pasta de spam e junk.
+2) Adicione noreply@exemplo-suporte.pt à lista de remetentes seguros.
+3) Em Definições > Notificações confirme que as notificações estão ativas.
+4) Confirme que o email da conta está correto e verificado.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,2430,183,17.48,,True,False,True
+M25,Estou muito desiludido com o atendimento. Esperei três dias por uma resposta e ninguém me contactou.,False,complaint,complaint,2,2,ENVIAR,ESCALAR,compliance,"promises or hints at a specific compensation/goodwill gesture ('avaliação da atribuição de um gesto de boa vontade') which violates the rule against promising specific refunds, discounts, or compensation.","Exmo.(a) Senhor(a), compreendemos perfeitamente a sua frustração com o tempo de espera e lamentamos sinceramente que a sua experiência não tenha correspondido às suas expectativas. Para podermos analisar a sua situação com a atenção devida, propomos que seja agendado um contacto telefónico com o seu gestor de conta ou, em alternativa, uma revisão detalhada do seu processo, para avaliarmos a atribuição de um gesto de boa vontade. Ficamos a aguardar a sua disponibilidade. Com os melhores cumprimentos, Equipa de Suporte",1,3,930,212,30.556,,True,True,False
+M28,"Não estou satisfeita com a última atualização, mudaram tudo e agora é muito mais difícil encontrar as coisas.",True,complaint,complaint,1,1,ENVIAR,ESCALAR,compliance,"Promises a specific refund, discount or compensation (amount or certainty) by mentioning an 'oferta de boa vontade'.","Estimada cliente, compreendemos perfeitamente a sua frustração com a recente atualização e lamentamos que a sua experiência não tenha correspondido às suas expectativas. Para podermos ajudar a simplificar a sua navegação e ouvir as suas sugestões, propomos que o seu gestor de conta lhe ligue brevemente, além de avaliarmos uma oferta de boa vontade para mitigar este incómodo. Com os melhores cumprimentos, Equipa de Suporte",1,3,899,158,17.346,,True,True,False
+M29,O vosso apoio ao cliente foi mal-educado comigo ao telefone ontem. Gostava que isso ficasse registado.,False,complaint,complaint,2,2,ENVIAR,ESCALAR,compliance,"The draft promises to evaluate a compensation measure, which violates the rule against promising or implying a specific refund, discount, or compensation (amount or certainty).","Estimado(a) cliente, lamentamos profundamente a situação descrita e o impacto que esta teve na sua experiência com o nosso serviço, sendo esta uma postura que não reflete os nossos valores de atendimento. Para podermos analisar o sucedido com a devida atenção, propomos agendar um contacto telefónico com o nosso gestor de conta para ouvirmos o seu testemunho e avaliarmos uma medida de compensação pela inconveniência. Agradecemos o seu contacto e o seu contributo para a melhoria contínua dos nossos serviços. Com os melhores cumprimentos, Equipa de Suporte",1,3,940,182,42.348,,True,True,False
+M30,Prometeram-me um desconto na renovação e agora não o aplicaram. Quero uma explicação.,True,complaint,billing,2,2,ENVIAR,ENVIAR,ok,,"Estimado Bruno Costa, agradecemos o seu contacto. Relativamente à fatura com o identificador INV-2026-1015, emitida a 2026-10-15 no valor de 588,00 euros, verificamos o seu registo de faturação. Como a situação reportada sobre a aplicação de um desconto não consta nos nossos registos atuais, a nossa equipa de faturação irá analisar o seu caso em detalhe para podermos prestar os esclarecimentos necessários. Equipa de Suporte",1,3,1371,154,24.122,,False,True,True

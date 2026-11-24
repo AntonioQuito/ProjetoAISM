@@ -1,0 +1,180 @@
+id,text,ambiguous,exp_cat,pred_cat,exp_urg,pred_urg,exp_dec,pred_dec,reason,issues,draft,specialist_calls,llm_calls,in_tok,out_tok,latency_s,error,cat_ok,urg_ok,dec_ok
+M01,Cobraram-me duas vezes o plano Pro este mês! Quero o dinheiro de volta.,False,billing,billing,2,2,ENVIAR,ENVIAR,ok,,"Exma. Senhora Ana Ferreira,
+
+Compreendemos a sua preocupação. Analisámos o seu registo e verificámos que, relativamente ao mês de novembro, existem dois pagamentos registados para a fatura com o identificador INV-2026-1103, ambos no valor de 49,00 euros, efetuados através do cartão Visa terminado em 1234 (com os identificadores de pagamento PAY-9102 e PAY-9103, ambos na data de 2026-11-03).
+
+Este caso será analisado pela nossa equipa de faturação para a devida verificação.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,1579,210,19.397,,True,True,True
+M02,Como configuro o webhook de integração no painel V2?,False,technical,technical,1,1,ENVIAR,ENVIAR,ok,,"Estimado(a) cliente,
+
+Para configurar o webhook de integração no painel V2, por favor siga os passos abaixo:
+
+1) No painel V2, abra Definições > Integrações > Webhooks.
+2) Clique em 'Novo webhook'.
+3) Introduza o URL HTTPS que vai receber os eventos.
+4) Escolha os eventos a subscrever.
+5) Copie o 'segredo de assinatura' para validar o cabeçalho X-Signature.
+6) Clique em 'Enviar evento de teste' e confirme que o seu servidor devolve HTTP 200.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,2477,219,17.4,,True,True,True
+M03,A API está offline há 4 horas! Toda a minha empresa está parada!,False,technical,technical,3,3,ESCALAR,ESCALAR,urgency_3,,"[not covered] Lamentamos a situação. De momento, não dispomos de informação sobre falhas gerais na API na nossa base de conhecimento. Vamos encaminhar o seu caso com urgência para a equipa técnica para verificação. Equipa de Suporte",1,2,2174,86,12.133,,True,True,True
+M04,O vosso software deu erro e fez-me perder o dia. Exijo indemnização!,True,complaint,complaint,3,3,ESCALAR,ESCALAR,urgency_3,,"Estimado/a cliente, compreendemos perfeitamente a sua frustração com a situação ocorrida e lamentamos o transtorno causado no seu dia de trabalho. Estamos inteiramente disponíveis para analisar o sucedido com a máxima atenção e, para o efeito, propomos que o seu gestor de conta lhe ligue brevemente para avaliarmos a situação em conjunto e encontrarmos a melhor forma de repor a normalidade. Equipa de Suporte",1,2,624,116,11.852,,True,True,True
+M05,A app crasha quando tento pagar a fatura anual.,True,technical,technical,2,2,ENVIAR,ESCALAR,not_covered,,"[not covered] Pedimos desculpa, mas o problema referido não se encontra coberto pela nossa base de conhecimento atual. A nossa equipa irá analisar a situação o mais brevemente possível. Equipa de Suporte",1,2,2164,84,18.187,,True,True,False
+M06,O meu pagamento de novembro falhou mas o cartão tem saldo. Podem ver o que se passou?,False,billing,billing,2,2,ENVIAR,ENVIAR,ok,,"Cara Carla Mendes,
+
+Recebemos a sua mensagem relativa ao pagamento de novembro. Consultando os nossos registos, verificamos que a fatura INV-2026-1105, no valor de 19,00 euros emitida a 2026-11-05, associada ao pagamento PAY-9120 através do cartão Mastercard terminado em 5521, não foi concluída devido a uma recusa do cartão.
+
+Compreendemos a situação e o caso será analisado pela nossa equipa de faturação.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,1472,174,17.89,,True,True,True
+M07,Quero usar uma funcionalidade que vi no site mas não encontro.,False,technical,technical,1,1,ESCALAR,ESCALAR,not_covered,,"[not covered] Lamentamos, mas de momento não temos informação na nossa base de conhecimento sobre a funcionalidade a que se refere. Equipa de Suporte",1,2,2168,69,19.405,,True,True,True
+M08,Podem enviar-me o valor e a data da última fatura? Preciso para a contabilidade.,False,billing,billing,1,1,ENVIAR,ENVIAR,ok,,"Exmo. Senhor Diogo Pinto,
+
+Em resposta ao seu pedido para efeitos de contabilidade, informamos que a sua última fatura (referente à fatura com o identificador INV-2026-1112) foi emitida no valor de 49,00 euros e datada de 12-11-2026.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,1423,129,19.576,,True,True,True
+M09,Porque é que este mês paguei 99€ se antes eram 89€?,False,billing,billing,2,2,ENVIAR,ENVIAR,ok,,"Cara Eduarda Lopes,
+
+Em resposta à sua questão, informamos que o preço do plano Business mensal foi alterado de 89,00 EUR para 99,00 EUR, conforme nota registada na sua conta a 01-10-2026 e aviso enviado por correio eletrónico a 01-09-2026. Assim, a fatura com o identificador INV-2026-1008, emitida a 08-10-2026, e a fatura com o identificador INV-2026-1108, emitida a 08-11-2026, correspondem já ao novo valor de 99,00 EUR, pago através de cartão Visa terminado em 7765.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,1752,239,18.41,,True,True,True
+M10,Cancelei a subscrição em setembro e cobraram-me 19€ em outubro. Isto é inadmissível!!,True,billing,billing,2,2,ENVIAR,ESCALAR,cancelled_account,,"Estimado Fábio Ribeiro,
+
+Compreendemos a sua preocupação relativamente à cobrança. Analisámos o seu registo e verificamos que a subscrição do plano Starter foi cancelada a 30 de setembro de 2026. No entanto, consta o pagamento PAY-8950 no valor de 19,00 € efetuado a 30 de outubro de 2026, referente à fatura INV-2026-1030, pago através do cartão Visa terminado em 3310.
+
+Esta situação será encaminhada para a equipa de faturação para ser revista com atenção.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,2,1193,183,11.488,,True,True,False
+M11,Quando vence a fatura anual do plano Business e de quanto é?,False,billing,billing,1,1,ENVIAR,ENVIAR,ok,,"Caro Bruno Costa,
+
+Em resposta à sua questão, a fatura pendente do plano Business (anual), com o número INV-2026-1015, vence a 30 de novembro de 2026 e o valor é de 588,00 euros.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,1313,116,17.1,,True,True,True
+M12,"Já paguei a fatura de novembro, mas o sistema continua a mostrar em dívida.",False,billing,billing,2,2,ENVIAR,ENVIAR,ok,,"Estimada Eduarda Lopes,
+
+Em resposta à sua mensagem, confirmamos que a fatura com o identificador INV-2026-1108, emitida a 2026-11-08 no valor de 99,00 EUR, se encontra paga com o pagamento PAY-9140 efetuado com sucesso através do cartão Visa terminado em 7765.
+
+O nosso sistema já tem o registo correto da sua situação.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,1673,166,24.129,,True,True,True
+M13,"Estou a ver uma cobrança de 500€ que não reconheço, acho que é fraude!",False,billing,billing,3,3,ESCALAR,ESCALAR,urgency_3,,"Estimada Carla Mendes,
+
+Em resposta à sua mensagem, consultámos o seu registo de faturação e verificámos que não consta nenhuma cobrança no valor de 500€.
+
+Temos registada a fatura INV-2026-1005 no valor de 19,00€, paga a 2026-10-05 através do cartão Mastercard terminado em 5521 (pagamento PAY-8900), e a fatura INV-2026-1105 no valor de 19,00€, datada de 2026-11-05, cujo pagamento associado PAY-9120 foi recusado pelo cartão.
+
+Caso tenha alguma dúvida sobre estes valores ou se detetou a situação noutra conta, por favor informe-nos.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,2,1166,237,12.377,,True,True,True
+M14,Podem confirmar-me a data do último pagamento e o método usado?,False,billing,billing,1,1,ENVIAR,ENVIAR,ok,,"Estimada Gabriela Nunes,
+
+Em resposta à sua questão, confirmamos que o seu último pagamento foi efetuado a 02-11-2026, referente à fatura INV-2026-1102, no valor de 49,00€.
+
+O método utilizado foi um cartão Visa terminado em 4402 (referência de pagamento PAY-9080).
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,1417,154,17.609,,True,True,True
+M15,Fui cobrado na semana passada mas a conta continua a mostrar o plano como expirado. Podem confirmar se o pagamento foi registado?,True,billing,billing,2,2,ENVIAR,ENVIAR,ok,,"Estimado Diogo Pinto, obrigado pelo seu contacto. Confirmamos que o pagamento de 49,00 € relativo à fatura INV-2026-1112, efetuado a 2026-11-12 através do cartão Visa terminado em 9087, foi registado com sucesso. A sua conta encontra-se atualmente ativa no plano Pro. Pedimos desculpa por qualquer inconformidade temporária e agradecemos a sua compreensão. Equipa de Suporte",1,3,1464,153,18.597,,True,True,True
+M16,Esqueci-me da password e o email de recuperação não chega.,False,technical,technical,1,2,ENVIAR,ENVIAR,ok,,"Bom dia.
+
+Para recuperar a sua palavra-passe, siga os passos abaixo:
+
+1. Na página de login, clique em 'Esqueci-me da palavra-passe'.
+2. Introduza o email da conta.
+3. O email de recuperação chega em poucos minutos; verifique a pasta de spam.
+4. A ligação expira ao fim de 30 minutos; se expirar, peça outra.
+5. Se o email continuar a não chegar, verifique também a pasta de spam e junk, adicione noreply@exemplo-suporte.pt à lista de remetentes seguros e confirme que o email da conta está correto.
+
+Ficamos ao dispor para qualquer dúvida adicional.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,2503,246,24.156,,True,False,True
+M17,Estou a receber erro 429 na API quando faço muitos pedidos. O que significa?,False,technical,technical,2,1,ENVIAR,ENVIAR,ok,,"Bom dia.
+
+Em resposta à sua questão sobre o erro 429 na API, informo o seguinte:
+
+1) O erro 429 significa que excedeu o limite de pedidos: 60 por minuto no plano Pro e 300 por minuto no plano Business.
+2) Leia o cabeçalho Retry-After e aguarde esse tempo antes de repetir.
+3) Implemente 'exponential backoff' nos pedidos.
+4) Agrupe pedidos sempre que possível usando os endpoints em lote.
+
+Se necessitar de mais alguma ajuda, disponha.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,2492,214,24.449,,True,False,True
+M18,Como é que exporto todos os meus dados para CSV?,False,technical,technical,1,1,ENVIAR,ENVIAR,ok,,"Bom dia. Para exportar os seus dados para CSV, por favor siga os seguintes passos:
+
+1) Abra Definições > Dados > Exportar.
+2) Escolha o conjunto de dados e o intervalo de datas.
+3) Clique em 'Exportar CSV'.
+4) Receberá um email com a ligação de descarga, válida durante 24 horas. Note que exportações grandes (mais de 100 000 linhas) podem demorar até 15 minutos.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,2451,190,16.809,,True,True,True
+M19,Como ativo a autenticação em dois passos na minha conta?,False,technical,technical,1,1,ENVIAR,ENVIAR,ok,,"Bom dia.
+
+Para ativar a autenticação em dois passos na sua conta, siga estes passos:
+
+1) Abra Definições > Segurança.
+2) Clique em 'Ativar autenticação em dois passos'.
+3) Digitalize o código QR com uma aplicação autenticadora (por exemplo Google Authenticator).
+4) Introduza o código de 6 dígitos para confirmar.
+5) Guarde os códigos de recuperação num local seguro.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,2438,177,17.955,,True,True,True
+M20,Vocês suportam login SSO com SAML para a minha equipa?,False,technical,technical,1,1,ESCALAR,ESCALAR,not_covered,,"[not covered] Pedimos desculpa, mas de momento não dispomos de informação na nossa base de conhecimento sobre suporte para login SSO com SAML. Iremos analisar o seu pedido e entraremos em contacto brevemente. Equipa de Suporte",1,2,2172,87,12.17,,True,True,True
+M21,"Já tentei de tudo, a app fecha sozinha sempre que abro o painel, estou farto disto!",True,technical,technical,2,2,ENVIAR,ENVIAR,ok,,"Bom dia.
+
+Compreendo a sua frustração com a aplicação a fechar de forma inesperada. Para resolver esta situação, por favor, siga os passos indicados abaixo:
+
+1) Atualize a aplicação para a versão mais recente.
+2) Limpe a cache acedendo a Definições da app > Armazenamento > Limpar cache.
+3) Reinicie o seu dispositivo.
+4) Se o problema continuar, desinstale e reinstale a aplicação (os seus dados ficam guardados na conta).
+5) Caso o problema persista, envie-nos o modelo do dispositivo e a versão da aplicação.
+
+Ficamos a aguardar o seu feedback.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,2525,229,24.403,,True,True,True
+M22,Como convido colegas para a minha conta?,False,technical,technical,1,1,ENVIAR,ENVIAR,ok,,"Bom dia.
+
+Para convidar colegas para a sua conta, siga os passos abaixo:
+
+1) Abra Definições > Equipa.
+2) Clique em 'Convidar membro'.
+3) Introduza o email do colega e escolha a função (Administrador, Editor ou Leitor).
+4) Tenha em atenção que o convite expira em 7 dias e o número de lugares depende do plano contratado.
+
+Se precisar de mais alguma ajuda, estamos ao dispor.
+
+Equipa de Suporte",1,3,2434,184,17.902,,True,True,True
+M23,Há integração nativa com o Salesforce?,False,technical,technical,1,1,ESCALAR,ESCALAR,not_covered,,"[not covered] Lamentamos, mas de momento não dispomos de informação na nossa base de conhecimento sobre integração nativa com o Salesforce. Equipa de Suporte",1,2,2158,70,12.369,,True,True,True
+M24,As notificações por email deixaram de me chegar.,False,technical,technical,1,2,ENVIAR,ENVIAR,ok,,"Bom dia.
+
+Para resolver a situação com as notificações por email, por favor, siga os passos indicados:
+
+1) Verifique a pasta de spam e junk.
+2) Adicione noreply@exemplo-suporte.pt à lista de remetentes seguros.
+3) Em Definições > Notificações confirme que as notificações estão ativas.
+4) Confirme que o email da conta está correto e verificado.
+
+Com os melhores cumprimentos,
+Equipa de Suporte",1,3,2430,183,17.48,,True,False,True
+M25,Estou muito desiludido com o atendimento. Esperei três dias por uma resposta e ninguém me contactou.,False,complaint,complaint,2,2,ENVIAR,ESCALAR,compliance,"promises or hints at a specific compensation/goodwill gesture ('avaliação da atribuição de um gesto de boa vontade') which violates the rule against promising specific refunds, discounts, or compensation.","Exmo.(a) Senhor(a), compreendemos perfeitamente a sua frustração com o tempo de espera e lamentamos sinceramente que a sua experiência não tenha correspondido às suas expectativas. Para podermos analisar a sua situação com a atenção devida, propomos que seja agendado um contacto telefónico com o seu gestor de conta ou, em alternativa, uma revisão detalhada do seu processo, para avaliarmos a atribuição de um gesto de boa vontade. Ficamos a aguardar a sua disponibilidade. Com os melhores cumprimentos, Equipa de Suporte",1,3,930,212,30.556,,True,True,False
+M26,Péssimo serviço. Já é a terceira vez este mês que contacto o suporte pelo mesmo problema.,True,complaint,complaint,2,2,ENVIAR,ENVIAR,ok,,"Estimado/a cliente, compreendemos perfeitamente a sua frustração perante esta situação recorrente e lamentamos sinceramente que a sua experiência não tenha correspondido às expectativas. Gostaríamos de analisar o seu processo em detalhe e propor uma revisão da conta com o seu gestor dedicado, de modo a encontrarmos a melhor solução para o seu caso. Ficará a aguardar o nosso contacto brevidades. Com os melhores cumprimentos, Equipa de Suporte",1,3,900,133,29.762,,True,True,True
+M27,Vou apresentar queixa no Livro de Reclamações e falar com o meu advogado se isto não for resolvido hoje.,False,complaint,complaint,3,3,ESCALAR,ESCALAR,urgency_3,,"Estimado(a) Cliente, compreendemos perfeitamente a sua frustração com a situação reportada e lamentamos muito o sucedido e o transtorno causado. Gostaríamos de analisar o seu processo com a máxima atenção e prioridade, pelo que propomos que o seu gestor de conta lhe ligue brevemente para encontrarmos a melhor solução e avaliarmos um gesto de boa vontade. Continuamos inteiramente à sua disposição. Com os melhores cumprimentos, Equipa de Suporte",1,2,638,126,12.55,,True,True,True
+M28,"Não estou satisfeita com a última atualização, mudaram tudo e agora é muito mais difícil encontrar as coisas.",True,complaint,complaint,1,1,ENVIAR,ESCALAR,compliance,"Promises a specific refund, discount or compensation (amount or certainty) by mentioning an 'oferta de boa vontade'.","Estimada cliente, compreendemos perfeitamente a sua frustração com a recente atualização e lamentamos que a sua experiência não tenha correspondido às suas expectativas. Para podermos ajudar a simplificar a sua navegação e ouvir as suas sugestões, propomos que o seu gestor de conta lhe ligue brevemente, além de avaliarmos uma oferta de boa vontade para mitigar este incómodo. Com os melhores cumprimentos, Equipa de Suporte",1,3,899,158,17.346,,True,True,False
+M29,O vosso apoio ao cliente foi mal-educado comigo ao telefone ontem. Gostava que isso ficasse registado.,False,complaint,complaint,2,2,ENVIAR,ESCALAR,compliance,"The draft promises to evaluate a compensation measure, which violates the rule against promising or implying a specific refund, discount, or compensation (amount or certainty).","Estimado(a) cliente, lamentamos profundamente a situação descrita e o impacto que esta teve na sua experiência com o nosso serviço, sendo esta uma postura que não reflete os nossos valores de atendimento. Para podermos analisar o sucedido com a devida atenção, propomos agendar um contacto telefónico com o nosso gestor de conta para ouvirmos o seu testemunho e avaliarmos uma medida de compensação pela inconveniência. Agradecemos o seu contacto e o seu contributo para a melhoria contínua dos nossos serviços. Com os melhores cumprimentos, Equipa de Suporte",1,3,940,182,42.348,,True,True,False
+M30,Prometeram-me um desconto na renovação e agora não o aplicaram. Quero uma explicação.,True,complaint,billing,2,2,ENVIAR,ENVIAR,ok,,"Estimado Bruno Costa, agradecemos o seu contacto. Relativamente à fatura com o identificador INV-2026-1015, emitida a 2026-10-15 no valor de 588,00 euros, verificamos o seu registo de faturação. Como a situação reportada sobre a aplicação de um desconto não consta nos nossos registos atuais, a nossa equipa de faturação irá analisar o seu caso em detalhe para podermos prestar os esclarecimentos necessários. Equipa de Suporte",1,3,1371,154,24.122,,False,True,True
