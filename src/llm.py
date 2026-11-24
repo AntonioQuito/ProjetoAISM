@@ -1,7 +1,6 @@
-"""LLM access layer: real Anthropic client and an offline stub for plumbing tests."""
+"""LLM access layer: Gemini (default) and Anthropic clients."""
 import json
 import os
-import re
 import time
 from dataclasses import dataclass
 
@@ -25,7 +24,7 @@ def parse_json(text):
 
 class AnthropicLLM:
     def __init__(self, model=None):
-        from anthropic import Anthropic  # imported lazily so --dry-run needs no key
+        from anthropic import Anthropic
         self.client = Anthropic()  # reads ANTHROPIC_API_KEY from the environment
         self.model = model or os.getenv("MODEL", DEFAULT_MODELS["anthropic"])
         self.use_temperature = True
@@ -54,7 +53,7 @@ class GeminiLLM:
     """Google AI Studio (free tier). Reads GEMINI_API_KEY. Spaces calls to respect the RPM limit."""
 
     def __init__(self, model=None):
-        from google import genai  # imported lazily so --dry-run needs no key
+        from google import genai
         from google.genai import types
         self.types = types
         self.client = genai.Client()  # reads GEMINI_API_KEY from the environment
@@ -99,37 +98,7 @@ class GeminiLLM:
         raise last
 
 
-class StubLLM:
-    """Keyword-based fake used ONLY to test the code path without an API key.
-    Its outputs are meaningless as results."""
-    model = "stub"
-
-    def complete(self, agent, system, user, max_tokens=800):
-        u = user.lower()
-        if agent == "router":
-            if re.search(r"fraude|offline|indemniza|advogado|reclama", u):
-                out = {"category": "complaint" if re.search(r"indemniza|advogado", u) else
-                       ("billing" if "fraude" in u else "technical"), "urgency": 3}
-            elif re.search(r"fatura|cobr|pagamento|pago|€", u):
-                out = {"category": "billing", "urgency": 2}
-            elif re.search(r"péssimo|desiludido|insatisfeit|mal-educado|prometeram", u):
-                out = {"category": "complaint", "urgency": 2}
-            else:
-                out = {"category": "technical", "urgency": 1}
-        elif agent == "technical":
-            covered = not re.search(r"sso|salesforce|funcionalidade", u)
-            out = {"covered": covered, "article_ids": ["FAQ-01"] if covered else [],
-                   "draft": "[stub] guia" if covered else "[not covered] [stub]"}
-        elif agent == "supervisor":
-            out = {"compliant": True, "issues": []}
-        else:
-            out = {"draft": f"[stub] minuta {agent}"}
-        return LLMResult(json.dumps(out, ensure_ascii=False), 0, 0)
-
-
-def get_llm(dry_run=False):
-    if dry_run:
-        return StubLLM()
+def get_llm():
     provider = os.getenv("PROVIDER", "gemini").lower()
     if provider == "gemini":
         return GeminiLLM()

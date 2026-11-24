@@ -1,4 +1,4 @@
-"""Loading of the mock data (customers DB, FAQ, test messages)."""
+"""Loading of the mock data (customers DB, FAQ)."""
 import json
 from pathlib import Path
 
@@ -15,10 +15,6 @@ def load_customers():
 
 def load_faq():
     return _load("faq.json")
-
-
-def load_messages():
-    return _load("test_messages.json")
 
 
 def find_customer(email, customers):

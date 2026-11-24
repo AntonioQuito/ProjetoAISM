@@ -26,48 +26,29 @@ cp .env.example .env             # Windows: copy .env.example .env
 ## Running
 
 ```bash
-# 1. Offline sanity tests (no API key, no cost)
-python -m pytest -q
-
-# 2. One message end to end
-python run_demo.py --email ana.ferreira@exemplo.pt --text "Cobraram-me duas vezes o plano Pro este mês! Quero o dinheiro de volta."
-
-# 3. Full evaluation on the 30 test messages (uses the API)
-python evaluate.py
-
-# Optional: plumbing check with a fake LLM (NOT valid results)
-python evaluate.py --dry-run --out results_dry
+python chat.py
 ```
 
-The default model is a Gemini Flash model on the free tier (`MODEL` in `.env`; check AI Studio for the current name). Calls are spaced by `MIN_INTERVAL_S` seconds to respect free-tier rate limits, so a full evaluation takes several minutes. Set `PROVIDER=anthropic` to use Claude instead.
+O programa pede o email do cliente (opcional, usado pelo agente de faturação para consultar a base de dados) e depois fica à espera de mensagens. Escreve a frase do cliente e carrega em Enter. Comandos: `/email <endereço>` para mudar de cliente e `/sair` para terminar.
 
-## Expected output
+Para cada mensagem é mostrado: categoria e urgência (Roteador), o especialista executado, a minuta de resposta, a decisão do Supervisor (`ENVIAR` / `ESCALAR`), e o número de chamadas, tokens e tempo.
 
-- `run_demo.py` prints a JSON record: routing, chosen specialist, draft, supervisor decision, token usage and latency.
-- `evaluate.py` prints one line per message and a metrics summary, and writes to `results/`:
-  - `metrics.json`: category / urgency / decision accuracy, per-class precision-recall-F1, escalation reasons, calls and tokens per message, latency
-  - `confusion_category.png/.csv`, `confusion_urgency.png/.csv`
-  - `per_message.csv`, `errors.csv`, `audit_log.jsonl` (full audit trail)
-
-Results can vary slightly between runs and models.
+The default model is a Gemini Flash model on the free tier (`MODEL` in `.env`). Calls are spaced by `MIN_INTERVAL_S` seconds to respect free-tier rate limits. Set `PROVIDER=anthropic` to use Claude instead.
 
 ## Repository structure
 
 ```
 data/
   customers.json       mock billing database (8 fictional customers)
-  faq.json             mock FAQ / troubleshooting base (10 articles; some topics deliberately missing)
-  test_messages.json   30 test messages in PT-PT with ground truth (category, urgency, decision)
+  faq.json             mock FAQ / troubleshooting base (some topics deliberately missing)
 src/
-  llm.py               Gemini / Anthropic client wrappers + offline stub
+  llm.py               Gemini / Anthropic client wrappers
   router.py            Agent 1 (classifier, JSON only)
   specialists.py       Agents 2a/2b/2c
   supervisor.py        Agent 3 (escalation rules + compliance check)
-  pipeline.py          Orchestrator and audit record
+  pipeline.py          Orchestrator
   data.py              data loading / customer lookup
-tests/test_offline.py  offline tests
-evaluate.py            runs the dataset and computes metrics
-run_demo.py            single-message demo
+chat.py                interactive mode (type a message, get the result)
 ```
 
 All customers, emails and data are fictional.
